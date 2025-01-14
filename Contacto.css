@@ -724,21 +724,21 @@ font-size: 15px;
 }
 
 .fren-1 {
-background: url('../img/platica.png') center/cover no-repeat;
+background: url('platica.png') center/cover no-repeat;
 
 }
 .fren-2 {
-background: url('../img/centros.png') center/cover no-repeat;
+background: url('centros.png') center/cover no-repeat;
 }
 
 .atr-1 {
-background: url('../img/platica.png') center/cover no-repeat;
+background: url('platica.png') center/cover no-repeat;
 transform: rotateY(180deg);
 
 }
 
 .atr-2 {
-background: url('../img/centros.png') center/cover no-repeat;
+background: url('centros.png') center/cover no-repeat;
 transform: rotateY(180deg);
 }
 
