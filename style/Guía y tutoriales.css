@@ -1,0 +1,623 @@
+/*###### NOTA ####*/
+/*Al fianl se podra quitar algunos borde solo se colocaron como guia y poder trabajar con suus espacio*/
+
+body {
+    margin: 0;
+  }
+  
+  main {
+    margin: 0; /* Espacio entre el header y el footer */
+    padding: 0;
+    text-align: center; /* Centra el contenido dentro del main */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /*----CARRUSEL------*/
+  
+  .caja-principal {
+    margin: 0; /*margen de 1 px ariiba y abajo y centrado de los lados*/
+    width: 100%; /*ancho de caja*/
+    padding: 0; /* espacio adentro de la caja */
+    border: 1px solid #ccc; /* Borde de la caja para guiarme */
+    
+  }
+  .contenedor-carro{
+    margin: 0;/*espacio de 1 pz arriba y abajo dentro de la caja principal*/
+    width: 100%;/*ancho de carro*/
+    padding: 0;/*espacio dentro de donde va el carrusel*/
+    /*border: 1px solid #ccc;/*borde para guiarme*/
+    overflow: hidden;/*esconde lo que sale del carrusel a la izquierda*/
+    position: relative;/*nos va ayudar a posisionar lo botones donde queramos*/
+    margin-bottom: 0; /* Asegúrate de que no haya margen inferior */
+    padding-bottom: 0; /* Asegúrate de que no haya padding inferior */
+    
+  }
+  
+  .carro{
+    display: flex;/*las imagenes etsran en fila*/
+    transition: transform 0.5s ease-in-out;/*efecto a la hora de deslizar*/
+    flex-wrap: nowrap;
+    position: relative;
+  }
+  li .qsea3{
+
+    position: absolute;
+    right: auto;
+  
+  }
+  .carro ul{
+    list-style: none;/*le quita los puntos a la lista*/
+    padding: 0;
+    margin: 0;
+   display: flex;
+    
+  }
+  .carro li{
+    flex: 0 0 100%;
+    
+    width: 100%;/*para que ocupe todo el ancho del contenedor .carro*/
+  
+  }
+  .carro img{
+    width: 100%;/*para que la img se ajusten*/
+    height: auto;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .carro li {
+        flex: 0 0 100%; /* Cada imagen sigue ocupando el 100% del ancho */
+    }
+  
+    .carro img {
+        width: 100%; /* Se asegura que la imagen ocupe todo el ancho disponible */
+        height: auto; /* Mantiene la proporción */
+    }
+  }
+  
+  
+/*modal*/
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000;
+  }
+  
+  .modal-contenido {
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    z-index: 5000;
+     
+      background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+      backdrop-filter: blur(10px); /* Efecto de desenfoque */
+      -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores WebKit */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Opcional: un borde para resaltar */
+      padding: 20px; /* Opcional: espacio interno */
+      border-radius: 10px; /* Opcional: esquinas redondeadas */
+  
+  
+  
+  }
+  
+  .close {
+    color: #b41111;
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Asegurar que el iframe del video sea responsivo */
+  .modal .video {
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: 25em; /* La altura se ajusta automáticamente para mantener la proporción */
+    max-width: 100%; /* Evita que exceda el ancho del modal */
+    border: none; /* Opcional: elimina el borde del iframe */
+  }
+  
+  /* Contenedor para mantener la relación de aspecto (16:9) */
+  .modal-body {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (9 / 16 = 0.5625) */
+    height: 0;
+  }
+  
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*---BOTONES </>----*/
+  button{
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor:pointer;
+    z-index: 10;/*es para que enten encima del carrusel*/
+    transform: translateY(-50%);
+  }
+  
+  button.regresa {
+    left: 10px;
+  }
+  
+  button.siguiente {
+    right: 10px;
+  }
+  
+  @media  (max-width: 768px) {
+    .carro li {
+        width: 80%; /* Ajustamos el tamaño de las imágenes en pantallas pequeñas */
+    }
+  }
+  .qsea1 {
+    position: absolute;
+     border: none;
+     color:blacK;
+     background-image: linear-gradient(30deg, #76ebe1, #09af8b);
+     border-radius: 20px;
+     background-size: 100% auto;
+     font-family: inherit;
+     font-size: 25px;
+     padding: 0.6em 1.5em;
+     top: 60%;
+     right: 37%;
+     height: 4em;
+    }
+  .qsea1:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+  }
+  
+  .qsea2 {
+    border: none;
+    color: blacK;
+    background-image: linear-gradient(30deg, #76ebe1, #09af8b);
+    border-radius: 25px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 25px;
+    padding: 0.6em 1.5em;
+    width: 320px;
+    height: 4em;
+   
+    
+    
+   }
+  .qsea2:hover {
+   background-position: right center;
+   background-size: 200% auto;
+   -webkit-animation: pulse 2s infinite;
+   animation: pulse512 1.5s infinite;
+  }
+  
+  .qsea3 {
+    position: absolute;
+    border: none;
+    color: black;
+    background-image: linear-gradient(30deg, #76ebe1, #09af8b);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 25px;
+    padding: 0.6em 1.5em;
+    width: 320px;
+    right: -1650px;
+    height: 4em;
+   
+   }
+  .qsea3:hover {
+   background-position: right center;
+   background-size: 200% auto;
+   -webkit-animation: pulse 2s infinite;
+   animation: pulse512 1.5s infinite;
+  }
+  
+              
+    
+    @keyframes pulse512 {
+     0% {
+      box-shadow: 0 0 0 0 #04a4c066;
+     }
+    
+     70% {
+      box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+     }
+    
+     100% {
+      box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+     }
+    
+     
+    }
+    .enlaces{
+        text-decoration: none;
+        color: black;
+    }
+    .enlaces:hover{
+        color: white;
+        text-decoration: none;
+    }
+  
+  
+  
+  
+  
+  /* Ajustes para pantallas pequeñas */
+  /*Media Queries: Aseguramos que las reglas solo se apliquen cuando el ancho de la pantalla sea menor a 768px.*/
+  @media (max-width: 868px) {
+    .qsea1, .qsea2, .qsea3 {
+        font-size: 5px; /* Reduce el tamaño de fuente */
+        padding: 0.5em 1em; /* Reduce el padding */
+        width: auto; /* Asegura que no sean demasiado anchos */
+    }
+  
+    .qsea2{
+        width: 80px;
+    }
+  
+    .qsea1 {
+        right: 35%; /* Ajusta la posición */
+    }
+  
+    .qsea3 {
+    width: 80px;
+    
+    }
+  
+    
+    button {
+        padding: 8px; /* Reduce el padding de los botones generales */
+    }
+  }
+  
+  
+  @media(max-width: 2200px) {
+    .qsea3{
+        right: auto;
+    }
+  }
+  
+  
+  
+  /*----FIN DE CARRUSEL----*/
+  
+  
+  /*---INICIO DE MENU---*/
+  .contenedor-menu {
+    margin: 2px auto !important; /* Espacio de 10px arriba y abajo dentro de la caja principal */
+    width: 100%; /* Ancho del menú */
+    padding: 1px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    overflow: visible; /* Oculta cualquier contenido que sobresalga */
+    border-radius: 20px;
+    background: #0c5747;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px; /* Ajusta este valor para que el menú esté justo debajo del carrusel */
+    margin-top: 0; /* Asegúrate de que no haya margen superior */
+    padding-top: 0; /* Asegúrate de que no haya padding superior */
+    z-index: 10000; /* Para que el menú esté encima del carrusel */
+    
+  }
+  
+  .contenido {
+    margin-top: 150px; /* Espacio para que el contenido no se superponga al menú */
+  }
+  
+  .menu {
+    width: 100%; /* El nav toma todo el ancho del contenedor */
+    display: block;
+    font-size: 12px;
+    
+  
+  
+  }
+  
+  
+  /* Menú por defecto en pantallas grandes */
+  .menu-list {
+    display: flex; /* Muestra los elementos en línea */
+    justify-content: space-around; /* Espacio equitativo entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Quita el estilo de lista por defecto */
+    
+  }
+  
+  .menu-list li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-list .barra {
+    padding: 0 5px; /* Espacio entre las barras y los enlaces */
+    color: #333; /* Color de la barra */
+  }
+  
+  .menu-list a {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del enlace */
+    padding: 5px 10px; /* Espaciado interno */
+  
+    border-radius: 10px; /* Borde redondeado a los enlaces */
+    transition: background-color 0.3s ease; /* Para hacer más suave el cambio de color */
+  }
+  
+  .menu-list a:hover {
+    background-color: #2c3835; /* Cambia el color de fondo al pasar el ratón */
+    color: white; /* Cambia el color del texto al pasar el ratón */
+  }
+  
+  .menu-list .img-fluid {
+    max-width: 150px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+  
+  }
+  
+  @media (max-width: 768px) {
+    .menu-list {
+        display: flex;
+        flex-direction: column; /* Apilar los elementos */
+        justify-content: flex-start;
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        padding: 0;
+        margin: 0;
+    }
+  
+    .menu-list li {
+        text-align: center; /* Centrar los enlaces */
+        width: 100%; /* Asegura que cada elemento ocupe todo el ancho disponible */
+    }
+  
+    .menu-list .barra {
+        display: none; /* Ocultar las barras en pantallas pequeñas */
+    }
+  }
+  
+  
+  /*cambios en le boto hamburguesa*/
+  .menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 24px;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer;
+    color: rgb(19, 18, 18); /* Cambia el color del ícono a negro */
+    margin: 10px;
+    position: absolute;
+    right: 1%;
+    top: 27%;
+  
+  }
+  
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        top: 17px;
+        right: 10px;
+  
+    }
+  
+    .menu-list {
+        display: none; /* Oculto por defecto en pantallas pequeñas */
+        flex-direction: column; /* Apila los elementos en columnas */
+    }
+  
+    .menu-list.active {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+  
+    .menu-list li {
+        margin: 10px 0; /* Espacio entre los elementos */
+    }
+  
+    .menu-list .barra {
+        display: none; /* Oculta las barras en pantallas pequeñas */
+    }
+  }
+  
+  /*bienvenida*/
+  
+  
+  .e-card {
+    margin-top: 0;
+    margin: 00px auto;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+    box-shadow: 0px 8px 28px -9px rgba(233, 19, 19, 0.45);
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 3800px;
+    height: 1000px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(100, 157, 223);
+    font-weight: 600;
+  }
+  
+  .name {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+    position: relative;
+    top: -87px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 30000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 40000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 50000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .name {
+        font-size: 12px;
+  
+    }
+  }
+  
+  
+
+  /*----------Contenido-------------------*/
+
+.contenido{
+    margin: 10px auto; /* Espacio de 10px arriba y abajo dentro de la caja principal */
+    width: 100%; /* Ancho del menú */
+    padding: 5px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+   border: 1px solid black;
+   
+}
+
+.parra{
+    margin: 10px auto; /* Espacio de 10px arriba y abajo dentro de la caja principal */
+    width: 100%; /* Ancho del menú */
+    padding: 5px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    border: 1px solid black;
+
+}
+
+.aside{
+    margin: 10px auto; /* Espacio de 10px arriba y abajo dentro de la caja principal */
+    width: 100%; /* Ancho del menú */
+    padding: 5px; /* Espacio interno del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    border: 1px solid black;
+
+
+}
+/*-------------card secciones-------------------*/
+
+h2{
+    font-size: 54px;
+}
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    gap: 20px;
+}
+
+.seccion{
+    width:40%;
+    height: 20rem;
+    border: 1px solid black;
+
+    
+}
+
+/*media para que la seccion ocupe una sola fila es decir el 100% de la paguina*/
+
+@media (max-width: 768px) {
+    .seccion {
+        width: 100%; /* Cada caja ocupa una fila completa */
+    }
+}
+
+
+
+

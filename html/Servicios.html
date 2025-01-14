@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/Servicios.css">
+    <title>SEA</title>
+</head>
+<body>
+
+    <main>
+        <div class="caja-principal">    
+            
+ 
+        <!--contenedor carrusel-->
+        <div class="contenedor-carro">
+          <div class="carro">
+              <ul>
+                  <li><img src="../img/1.png.png" alt="img-carrusel"><center>
+                   
+                    <button type="button" class="qsea1 enlaces" id="abrirBoton">
+                      ¿Qué es el SEA?
+                    </button></center>
+                  </li>
+                  <li><img src="../img/2.png.png" alt="img-carrusel"><center>
+                    
+                    <button type="button" class="qsea2">
+                      <a class="enlaces" href="../html/Ubicacion.html">¿Dónde se ubican los centros SEA?</a>
+                    </button></center>
+                    
+                  </li>
+                  <li><img src="../img/3.png.png" alt="img-carrusel"><center>
+                    
+                    <button type="button" class="qsea3">
+                      <a class="enlaces" href="../html/inscribirse.html">¿Cómo puedo inscribirme al SEA?</a>
+                    </button></center>
+
+                  </li>                       
+              </ul>
+
+          </div>
+          <button class="regresa"><</button>
+          <button class="siguiente">></button>
+
+      </div><!--cierre de carrusel-->
+
+
+    
+        <div class="contenedor-menu">
+          <!--contenedor modal-->
+
+      <div id="modal1" class="modal">
+        <div class="modal-contenido">
+          <span class="close">&times;</span>
+          <p><iframe class="video" width="760" height="475" src="https://www.youtube.com/embed/Clx8idPxq0Y?si=hD3OunBh_FYCT-mX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+        </div>
+
+      </div><!--cierre de modal-->
+          <button class="menu-toggle" id="menuToggle">☰</button>
+
+          <nav class="menu">
+              <ul class="menu-list" id="menuList">
+                  <li><img src="../img/SEA.png" class="img-fluid" alt="..."></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/sea.html">¿QUÉ ES EL SEA?</a></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/Servicios.html">SERVICIOS</a></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/inscribirse.html">¿CÓMO INSCRIBIRSE AL SEA?</a></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/Ubicacion.html">UBICACIÓN DE CENTRO SEA</a></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/Guía y tutoriales .html">GUÍA Y TUTORIALES</a></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/Marco normativo.html">MARCO NORMATIVO</a></li>
+                  <li class="barra">|</li>
+                  <li><a href="../html/Contacto.html">CONTACTO</a></li>
+              </ul>
+          </nav>
+      </div>
+
+      
+      <div class="e-card playing">
+        <div class="image"></div>
+        
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        
+      
+            <div class="infotop">
+           
+      <div class="name">
+        
+        <p>Servicios
+        </p>
+        </div>
+        </div>
+      </div>
+<BR>
+ 
+  <!--contenido-->
+<!--cards-->
+
+
+<div class="tabs">
+  <div class="tab active-tab" onclick="openTab(event, 'tab1')">Servicios Académicos </div>
+  <div class="tab" onclick="openTab(event, 'tab2')">Servicios escolares y administrativos</div>
+</div>
+<!--parte 1-->
+<div id="tab1" class="tab-content active-content">
+  <h3>Para apoyar tu aprendizaje el SEA te ofrece:</h3>
+  <p>“Siente la fuerza de la manada”</p>
+ 
+  <div class="contenedor-servicios1"> 
+    <div class="subcontenedor-servicios">
+
+
+      <!-- card 1-->
+       <div class="card">
+           <!-- Cara delantera con la imagen -->
+           <div class="card-face front" style="background-image: url('../img/pedagogia1.png');">
+           </div>
+           <!-- Cara trasera con texto -->
+           <div class="card-face back">
+              <div class="texto">
+                <center><h3>Asesoría Psicopedagógica</h3></center>
+                <br>
+                <P>Es el profesional psicopedagógico que te orientará sobre:</P>
+                <ul>
+                  <li>Las estrategias de aprendizaje para el estudio independiente.</li>
+                  <li>La organización y adaptación a la modalidad no escolarizada.</li>
+                  <li>El uso de la plataforma digital.</li>
+                  <li>Cómo desarrollar tu plan de trabajo.</li>
+                  <li>Los trámites escolares y administrativos.</li>
+                  <li>Y cómo mantener tu avance académico.</li>
+              </ul>
+              </div>
+           </div>
+       </div>
+
+       <!-- card 2-->
+       <div class="card">
+         <!-- Cara delantera con la imagen -->
+         <div class="card-face front" style="background-image: url('../img/contenido.png');">
+         </div>
+         <!-- Cara trasera con texto -->
+         <div class="card-face back">
+          <div class="texto">
+            <center><h3>Asesoría de Contenido</h3></center>
+            <br>
+            <p>Es el profesional de la asignatura que te orientará sobre:</p>
+<ul>
+    <li>La comprensión de los contenidos de cada asignatura.</li>
+    <li>La resolución de dudas sobre temas específicos de cada asignatura.</li>
+    <li>El acompañamiento y el visto bueno para la presentación de tus evaluaciones.</li>
+</ul>
+
+          </div>
+       </div>
+     </div>
+
+     <!-- card 3-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/materiales.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto">
+          <center><h3>Material Didáctico</h3></center>
+          <br>
+          <p>En este espacio podrás:</p>
+<ul>
+    <li>Tener acceso a la descarga de material didáctico.</li>
+    <li>Consultar los compendios fasciculares y material de estudio.</li>
+    <li>Practicar actividades que te permitirán obtener un mejor resultado en tus evaluaciones.</li>
+</ul>
+
+        </div>
+     </div>
+     </div>
+
+     <!-- card 4-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+
+       <div class="card-face front" style="background-image: url('../img/evaluacion.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto">
+          <center><h3>Evaluación del aprendizaje</h3></center>
+         <ul>
+    <li>Realizarás evaluaciones a través del sistema SEACOBA diseñado para aplicar exámenes globales o fasciculares de cada asignatura.</li>
+    <li>Podrás programar y registrarte a evaluación con la anticipación necesaria.</li>
+    <li>Al concluir cada evaluación obtendrás un reporte de examen con la calificación obtenida.</li>
+    <li>Recibirás retroalimentación de las evaluaciones que hayas presentado.</li>
+    <li>Podrás presentar 4 evaluaciones globales y 8 evaluaciones fasciculares por mes.</li>
+</ul>
+
+        </div>
+     </div>
+     </div>
+
+     <!-- card 5-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/biblioteca.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto">
+          <center><h3>Biblioteca</h3></center>
+          <br>
+          <ul>
+            <li>Aquí podrás encontrar y consultar los compendios fasciculares de cada asignatura del plan de estudios.</li>
+            <li>Contarás con el apoyo y asesoría de personal especializado.</li>
+            <li>Encontrarás material bibliográfico que apoyará tu proceso de aprendizaje.</li>
+            <li>Un asesor psicopedagógico te orientará para que aproveches al máximo este servicio.</li>
+        </ul>
+        
+        </div>
+     </div>
+     </div> 
+
+     <!-- card 6-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/laboratorio.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto">
+          <center><h3>Laboratorio de ciencias experimentales</h3></center>
+          
+          <ul>
+            <li>Aquí podrás realizar actividades experimentales de asignaturas como física, química, biología y ecología.</li>
+            <li>Contarás con el apoyo y asesoría de personal especializado.</li>
+            <li>Encontrarás el material y equipo necesario.</li>
+            <li>Consulta al asesor de contenido de la asignatura para programar tus actividades experimentales.</li>
+        </ul>
+        
+        </div>
+     </div>
+     </div>
+
+     <!-- card 7-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/escolares.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto">
+          <center><h3>Actividades paraescolares</h3></center>
+          <br>
+          <ul>
+            <li>En cada centro se ofrecen actividades como danza, música, teatro y pintura, entre otras.</li>
+            <li>Encontrarás profesores especializados en cada actividad.</li>
+            <li>Un asesor psicopedagógico te orientará y canalizará con el profesor de la actividad paraescolar que decidas practicar.</li>
+        </ul>
+        
+        </div>
+     </div>
+     </div>
+
+
+
+     </div> 
+
+
+
+
+  <!-- cierre de tabla1-->
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--parte 2-->
+<div id="tab2" class="tab-content">
+  <h3>Para acceder a estos servicios acude a la ventanilla del SEA de la Unidad de Registro y Control Escolar del plantel en donde recibirás atención de personal administrativo calificado para realizar trámites como:</h3>
+  <p>Únete a la comunidad del SEA </p>
+  <div class="contenedor-servicios1"> 
+    <div class="subcontenedor-servicios">
+
+
+      <!-- card 1-->
+       <div class="card">
+           <!-- Cara delantera con la imagen -->
+           <div class="card-face front" style="background-image: url('../img/inscripcion.png');">
+           </div>
+           <!-- Cara trasera con texto -->
+           <div class="card-face back">
+              <div class="texto tex-atras">
+                <center><h3>Inscripción</h3></center>
+                <br>
+                <P>Realiza tu inscripción en la Unidad de Registro y Control Escolar del Centro SEA más cercano y forma parte de la comunidad del Sistema de Enseñanza Abierta del Colegio de Bachilleres.</P>
+              </div>
+           </div>
+       </div>
+
+       <!-- card 2-->
+       <div class="card">
+         <!-- Cara delantera con la imagen -->
+         <div class="card-face front" style="background-image: url('../img/credencial.png');">
+         </div>
+         <!-- Cara trasera con texto -->
+         <div class="card-face back">
+          <div class="texto tex-atras">
+            <center><h3>Credencial escolar</h3></center>
+            <br>
+            <P>Tu credencial escolar te permite identificarte como estudiante del Sistema de Enseñanza Abierta y con ella puedes acceder a diversos servicios en tu Centro SEA, así como a descuentos en servicios públicos como transporte, museos, librerías. </P>
+            <P>Recuerda que es indispensable para ingresar al Centro SEA.</P>
+          </div>
+       </div>
+     </div>
+
+     <!-- card 3-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/seguro.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto tex-atras">
+          <center><h3>Seguro facultativo</h3></center>
+          <br>
+          <P>Se refiere al servicio médico que, a través del IMSS, todo estudiante del SEA tiene derecho a recibir, siempre que se encuentre inscrito y vigente académicamente. La incorporación es de manera voluntaria y es requisito que el solicitante no cuente con un esquema de seguridad social en otra institución pública.</P>
+        </div>
+     </div>
+     </div>
+
+     <!-- card 4-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/historia.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto tex-atras">
+          <center><h3>Historia Académica</h3></center>
+          <P>Es el documento de control escolar que recopila la información académica de cada estudiante. En esta encontrarás datos como: nombre del estudiante, matrícula, promedio, número de asignaturas aprobadas y no aprobadas, formación laboral, nombre de las asignaturas, clave y calificaciones, entre otros datos.</P>
+          <P>Podrás descargarla desde la plataforma una vez que cuentes con tu clave de usuario.</P>
+        </div>
+     </div>
+     </div>
+
+     <!-- card 5-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/constancia.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto tex-atras">
+          <center><h3>Constancia de estudios</h3></center>
+          <br>
+          <P>Este documento te permitirá demostrar que te encuentras inscrito al SEA y que cuentas con estudios de bachillerato parciales o concluidos en esta modalidad educativa del Colegio de Bachilleres.</P>
+        </div>
+     </div>
+     </div>
+
+     <!-- card 6-->
+     <div class="card">
+       <!-- Cara delantera con la imagen -->
+       <div class="card-face front" style="background-image: url('../img/certificado.png');">
+       </div>
+       <!-- Cara trasera con texto -->
+       <div class="card-face back">
+        <div class="texto tex-atras">
+          <center><h3>Certificado de estudios</h3></center>
+          <br>
+          <P>Es el documento que emite el Colegio de Bachilleres a los estudiantes del SEA que cursaron y acreditaron la totalidad de las asignaturas del plan de estudios.</P>
+        </div>
+     </div>
+     </div>
+
+
+     </div> 
+
+
+
+
+  <!-- cierre de tabla1-->
+  
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+  </div>
+  </div>
+
+
+
+    
+
+    </div> 
+    <!--cierre de caja principal-->
+
+</main>
+    <script src="../script/Servicios.js"></script>
+  
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+
+</body>
+</html>
